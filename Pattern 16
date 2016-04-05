@@ -44,12 +44,6 @@ B00000100, B00000001, B00000010, B00000100, B00001000,
 B00000001, B00000010, B00001000, B00001000, B00010000
 };
 
-del[]=
-{
-100,0,100,0,0,
-100,0,0,0,100,
-0,0,0,0,1000
-};
 
 void setup() 
 {
@@ -74,7 +68,7 @@ shiftOut(data_1, clock_1, MSBFIRST, shift_1[i]);
 shiftOut(data_2, clock_2, MSBFIRST, gnd[i]);
 digitalWrite(latch_1, HIGH);
 digitalWrite(latch_2, HIGH);
-delay=del[i];
+delay(10);
 i++;
 if (i>=15)
 i=0;
