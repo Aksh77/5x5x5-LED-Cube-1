@@ -44,7 +44,7 @@ B00010001, B00001110, B00001110, B00010001, B00001000,
 B00010001, B00001000, B00001010, B00000100
 };
 
-del[]=
+int del[]=
 {
 100,0,100,0,100,
 0,100,100,0,100,
@@ -75,7 +75,7 @@ shiftOut(data_1, clock_1, MSBFIRST, shift_1[i]);
 shiftOut(data_2, clock_2, MSBFIRST, gnd[i]);
 digitalWrite(latch_1, HIGH);
 digitalWrite(latch_2, HIGH);
-delay=del[i];
+delay(del[i]);
 i++;
 if (i>=14)
 i=0;
